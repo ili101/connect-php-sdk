@@ -228,3 +228,4 @@ composer.lock
 # codecov
 coverage.xml
 .php_cs.cache
+.phpunit.result.cache

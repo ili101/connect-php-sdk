@@ -9,13 +9,15 @@ namespace Test\Unit;
 
 use Connect\Config;
 
+require_once __DIR__."/FulfillmentAutomationHelper.php";
+
 /**
  * Class TierRequestTest
  * @package Test\Unit
  */
 class TierRequestTest extends \Test\TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         /**
          * change the work dir, by default the default config file

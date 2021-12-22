@@ -1,95 +1,97 @@
-<phpunit bootstrap="vendor/autoload.php" verbose="true" stopOnError="true" stopOnFailure="true">
-    <filter>
-        <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">src</directory>
-        </whitelist>
-    </filter>
-    <logging>
-        <log type="testdox-text" target="php://stdout" showUncoveredFiles="false"/>
-        <log type="coverage-clover" target="coverage.xml"/>
-    </logging>
-    <testsuites>
-        <testsuite name="Directory Services">
-            <file>tests/Unit/DirectoryTests/AssetTest.php</file>
-            <file>tests/Unit/DirectoryTests/ProductTest.php</file>
-            <file>tests/Unit/DirectoryTests/TierConfigTest.php</file>
-            <file>tests/Unit/DirectoryTests/TierAccountsTest.php</file>
-        </testsuite>
-        <testsuite name="Subscription Services">
-            <file>tests/Unit/SubscriptionTests/SubscriptionRequestTest.php</file>
-        </testsuite>
-        <testsuite name="Tier Account Requests">
-            <file>tests/Unit/TierAccountRequests/ResponsesTest.php</file>
-            <file>tests/Unit/TierAccountRequests/TierAccountRequestsBasicsTest.php</file>
-        </testsuite>
-        <testsuite name="Fail">
-            <file>tests/Unit/FulfillmentTests/FailTest.php</file>
-        </testsuite>
-        <testsuite name="Inquire">
-            <file>tests/Unit/FulfillmentTests/InquireTest.php</file>
-        </testsuite>
-        <testsuite name="Message">
-            <file>tests/Unit/MessageTest.php</file>
-        </testsuite>
-        <testsuite name="Skip">
-            <file>tests/Unit/FulfillmentTests/SkipTest.php</file>
-        </testsuite>
-        <testsuite name="ActivationTemplateResponse">
-            <file>tests/Unit/FulfillmentTests/ActivationTemplateResponseTest.php</file>
-        </testsuite>
-        <testsuite name="Logger">
-            <file>tests/Unit/Logger/LogRecordTest.php</file>
-            <file>tests/Unit/Logger/LogSessionTest.php</file>
-            <file>tests/Unit/LoggerTest.php</file>
-        </testsuite>
-        <testsuite name="RQL">
-            <file>tests/Unit/RQL/QueryTest.php</file>
-        </testsuite>
-        <testsuite name="ActivationTileResponse">
-            <file>tests/Unit/FulfillmentTests/ActivationTileResponseTest.php</file>
-        </testsuite>
-        <testsuite name="RequestTest">
-            <file>tests/Unit/FulfillmentTests/RequestTest.php</file>
-        </testsuite>
-        <testsuite name="Configuration">
-            <file>tests/Unit/ConfigTest.php</file>
-            <file>tests/Unit/Config/VaultConfigTest.php</file>
-        </testsuite>
-        <testsuite name="Application">
-            <file>tests/Unit/FulfillmentTests/FulfillmentAutomationTest.php</file>
-        </testsuite>
-        <testsuite name="Models">
-            <file>tests/Unit/ModelsTests/ModelTest.php</file>
-            <file>tests/Unit/ModelsTests/ParamTest.php</file>
-            <file>tests/Unit/ModelsTests/AssetTest.php</file>
-            <file>tests/Unit/ModelsTests/ContactInfoTest.php</file>
-        </testsuite>
-        <testsuite name="Model API Consistency">
-            <file>tests/Unit/ModelsTests/StructureTest.php</file>
-        </testsuite>
-        <testsuite name="RequestStructure">
-            <file>tests/Unit/ModelsTests/RequestStructureTest.php</file>
-        </testsuite>
-        <testsuite name="TierRequests">
-            <file>tests/Unit/FulfillmentTests/TierRequestTest.php</file>
-        </testsuite>
-        <testsuite name="Usage Responses">
-            <file>tests/Unit/UsageTests/AcceptTest.php</file>
-            <file>tests/Unit/UsageTests/AcceptResponseTest.php</file>
-            <file>tests/Unit/UsageTests/CloseTest.php</file>
-            <file>tests/Unit/UsageTests/DeleteTest.php</file>
-            <file>tests/Unit/UsageTests/RejectTest.php</file>
-            <file>tests/Unit/UsageTests/UsageSkipTest.php</file>
-            <file>tests/Unit/UsageTests/SubmitTest.php</file>
-            <file>tests/Unit/UsageTests/FileRetrieveExceptionTest.php</file>
-            <file>tests/Unit/UsageTests/FileCreationExceptionTest.php</file>
-        </testsuite>
-        <testsuite name="Usage Automation">
-            <file>tests/Unit/UsageTests/UsageAutomationBasicsTest.php</file>
-            <file>tests/Unit/UsageTests/UsageAutomationTest.php</file>
-        </testsuite>
-        <testsuite name="Usage File Automation">
-            <file>tests/Unit/UsageTests/UsageFileAutomationTest.php</file>
-        </testsuite>
-    </testsuites>
+<?xml version="1.0"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" bootstrap="vendor/autoload.php" verbose="true" stopOnError="true" stopOnFailure="true" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
+  <coverage processUncoveredFiles="true">
+    <include>
+      <directory suffix=".php">src</directory>
+    </include>
+    <report>
+      <clover outputFile="coverage.xml"/>
+    </report>
+  </coverage>
+  <logging>
+    <testdoxText outputFile="php://stdout"/>
+  </logging>
+  <testsuites>
+    <testsuite name="Directory Services">
+      <file>tests/Unit/DirectoryTests/AssetTest.php</file>
+      <file>tests/Unit/DirectoryTests/ProductTest.php</file>
+      <file>tests/Unit/DirectoryTests/TierConfigTest.php</file>
+      <file>tests/Unit/DirectoryTests/TierAccountsTest.php</file>
+    </testsuite>
+    <testsuite name="Subscription Services">
+      <file>tests/Unit/SubscriptionTests/SubscriptionRequestTest.php</file>
+    </testsuite>
+    <testsuite name="Tier Account Requests">
+      <file>tests/Unit/TierAccountRequests/ResponsesTest.php</file>
+      <file>tests/Unit/TierAccountRequests/TierAccountRequestsBasicsTest.php</file>
+    </testsuite>
+    <testsuite name="Fail">
+      <file>tests/Unit/FulfillmentTests/FailTest.php</file>
+    </testsuite>
+    <testsuite name="Inquire">
+      <file>tests/Unit/FulfillmentTests/InquireTest.php</file>
+    </testsuite>
+    <testsuite name="Message">
+      <file>tests/Unit/MessageTest.php</file>
+    </testsuite>
+    <testsuite name="Skip">
+      <file>tests/Unit/FulfillmentTests/SkipTest.php</file>
+    </testsuite>
+    <testsuite name="ActivationTemplateResponse">
+      <file>tests/Unit/FulfillmentTests/ActivationTemplateResponseTest.php</file>
+    </testsuite>
+    <testsuite name="Logger">
+      <file>tests/Unit/Logger/LogRecordTest.php</file>
+      <file>tests/Unit/Logger/LogSessionTest.php</file>
+      <file>tests/Unit/LoggerTest.php</file>
+    </testsuite>
+    <testsuite name="RQL">
+      <file>tests/Unit/RQL/QueryTest.php</file>
+    </testsuite>
+    <testsuite name="ActivationTileResponse">
+      <file>tests/Unit/FulfillmentTests/ActivationTileResponseTest.php</file>
+    </testsuite>
+    <testsuite name="RequestTest">
+      <file>tests/Unit/FulfillmentTests/RequestTest.php</file>
+    </testsuite>
+    <testsuite name="Configuration">
+      <file>tests/Unit/ConfigTest.php</file>
+      <file>tests/Unit/Config/VaultConfigTest.php</file>
+    </testsuite>
+    <testsuite name="Application">
+      <file>tests/Unit/FulfillmentTests/FulfillmentAutomationTest.php</file>
+    </testsuite>
+    <testsuite name="Models">
+      <file>tests/Unit/ModelsTests/ModelTest.php</file>
+      <file>tests/Unit/ModelsTests/ParamTest.php</file>
+      <file>tests/Unit/ModelsTests/AssetTest.php</file>
+      <file>tests/Unit/ModelsTests/ContactInfoTest.php</file>
+    </testsuite>
+    <testsuite name="Model API Consistency">
+      <file>tests/Unit/ModelsTests/StructureTest.php</file>
+    </testsuite>
+    <testsuite name="RequestStructure">
+      <file>tests/Unit/ModelsTests/RequestStructureTest.php</file>
+    </testsuite>
+    <testsuite name="TierRequests">
+      <file>tests/Unit/FulfillmentTests/TierRequestTest.php</file>
+    </testsuite>
+    <testsuite name="Usage Responses">
+      <file>tests/Unit/UsageTests/AcceptTest.php</file>
+      <file>tests/Unit/UsageTests/CloseTest.php</file>
+      <file>tests/Unit/UsageTests/DeleteTest.php</file>
+      <file>tests/Unit/UsageTests/RejectTest.php</file>
+      <file>tests/Unit/UsageTests/UsageSkipTest.php</file>
+      <file>tests/Unit/UsageTests/SubmitTest.php</file>
+      <file>tests/Unit/UsageTests/FileRetrieveExceptionTest.php</file>
+      <file>tests/Unit/UsageTests/FileCreationExceptionTest.php</file>
+    </testsuite>
+    <testsuite name="Usage Automation">
+      <file>tests/Unit/UsageTests/UsageAutomationBasicsTest.php</file>
+      <file>tests/Unit/UsageTests/UsageAutomationTest.php</file>
+    </testsuite>
+    <testsuite name="Usage File Automation">
+      <file>tests/Unit/UsageTests/UsageFileAutomationTest.php</file>
+    </testsuite>
+  </testsuites>
 </phpunit>

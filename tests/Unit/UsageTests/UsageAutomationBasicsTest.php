@@ -14,7 +14,7 @@ require_once __DIR__."/UsageAutomationBasicsHelper.php";
 
 class UsageAutomationBasicsTest extends \Test\TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         /**
          * change the work dir, by default the default config file

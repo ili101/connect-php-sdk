@@ -66,7 +66,7 @@ class LogSession implements \Countable
      * Count the LogRecords
      * @return int
      */
-    public function count()
+    public function count(): int
     {
         return count($this->sessionLog);
     }

@@ -15,7 +15,7 @@ use Connect\TierAccountRequestIgnore;
  * Class TierAccountRequestAcceptTest
  * @package Tests\Unit
  */
-class ResponsesTierAccountRequestsTest extends \Test\TestCase
+class ResponsesTest extends \Test\TestCase
 {
     /**
      * @return mixed

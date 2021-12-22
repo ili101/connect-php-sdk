@@ -12,7 +12,7 @@ use Connect\Config;
 
 class UsageAutomationTest extends \Test\TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         /**
          * change the work dir, by default the default config file

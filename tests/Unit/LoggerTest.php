@@ -195,7 +195,7 @@ class LoggerTest extends \Test\TestCase
     public function testSetLogFileFailDirectoryCreation()
     {
         $logger = new LoggerHelper();
-        $logger->setLogFile('/root/null/lol');
+        $logger->setLogFile('/tmp/null/lol');
     }
 
     /**
@@ -206,7 +206,7 @@ class LoggerTest extends \Test\TestCase
     public function testSetLogFileFailFileCreation()
     {
         $logger = new LoggerHelper();
-        $logger->setLogFile('/root/test.log');
+        $logger->setLogFile('/tmp/test.log');
     }
 
     public function testLogLevels()

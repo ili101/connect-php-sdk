@@ -19,7 +19,7 @@ require_once __DIR__."/RequestProcessorHelper.php";
  */
 class FulfillmentAutomationTest extends \Test\TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         /**
          * change the work dir, by default the default config file

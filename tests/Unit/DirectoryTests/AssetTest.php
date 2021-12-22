@@ -16,6 +16,7 @@ class AssetTest extends \Test\TestCase
     public function testGetInstance()
     {
         $assets = ConnectClient::getInstance(new Config(__DIR__. '/config.mocked.json'))->directory->listAssets();
+        // TODO: Error: Call to undefined method Test\Unit\DirectoryTests\AssetTest::assertInternalType()
         $this->assertInternalType("array", $assets);
     }
 

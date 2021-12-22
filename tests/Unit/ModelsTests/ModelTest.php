@@ -33,6 +33,7 @@ class ModelTest extends \Test\TestCase
 
         $this->assertObjectNotHasAttribute('illegal', $model);
 
+        // TODO: Error: Call to undefined method Test\Unit\DirectoryTests\AssetTest::assertInternalType()
         $this->assertInternalType('array', $model->getHidden());
         $this->assertCount(3, $model->getHidden());
 
@@ -54,6 +55,7 @@ class ModelTest extends \Test\TestCase
 
         $missing = $model->validate();
 
+        // TODO: Error: Call to undefined method Test\Unit\DirectoryTests\AssetTest::assertInternalType()
         $this->assertInternalType('array', $missing);
         $this->assertCount(1, $missing);
         $this->assertEquals('password', $missing[0]);
@@ -71,6 +73,7 @@ class ModelTest extends \Test\TestCase
 
         $protected = $model->__debugInfo();
 
+        // TODO: Error: Call to undefined method Test\Unit\DirectoryTests\AssetTest::assertInternalType()
         $this->assertInternalType('array', $protected);
         $this->assertCount(9, $protected);
 
@@ -215,6 +218,7 @@ class ModelTest extends \Test\TestCase
 
         $model = new ModelHelper($source);
 
+        // TODO: Error: Call to undefined method Test\Unit\DirectoryTests\AssetTest::assertInternalType()
         $this->assertInternalType('array', $model->items);
         $this->assertCount(2, $model->items);
 
@@ -291,6 +295,7 @@ class ModelTest extends \Test\TestCase
 
         $model = new ModelHelper($source);
 
+        // TODO: Error: Call to undefined method Test\Unit\DirectoryTests\AssetTest::assertInternalType()
         $this->assertInternalType('array', $model->value_choices);
         $this->assertCount(3, $model->value_choices);
 
@@ -318,6 +323,7 @@ class ModelTest extends \Test\TestCase
 
         $model = new ModelHelper($source);
 
+        // TODO: Error: Call to undefined method Test\Unit\DirectoryTests\AssetTest::assertInternalType()
         $this->assertInternalType('array', $model->vectors);
         $this->assertCount(3, $model->vectors);
 
@@ -377,6 +383,7 @@ class ModelTest extends \Test\TestCase
         $model = new ModelHelper($source);
         $array = $model->toArray();
 
+        // TODO: Error: Call to undefined method Test\Unit\DirectoryTests\AssetTest::assertInternalType()
         $this->assertInternalType('array', $array);
         $this->assertCount(5, $array);
 
